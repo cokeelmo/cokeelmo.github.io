@@ -1,85 +1,177 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>努力は裏切らない</title>
-   <link rel="icon" type="image/png" href="favicon_love.png">
-   <style>
-     body {
-       margin: 0;
-       height: 100vh;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       font-family: sans-serif;
-       background-color: #d6ccc2;
-     }
- 
-     h1 {
-       font-size: 20px;
-       color: #4d4844;
-     }
-     h2 {
-       font-size: 16px;
-       color: #4d4844;
-     }
-     p {
-       font-size: 15px;
-       color: #4d4844;
-     }
-     a {
-       font-size: 15px;
-       color: #4d4844;
-     }
-   </style>
- </head>
- <body>
-   <div class="container" style="width: 600px; word-wrap: break-word;">
-     <h1>Build. Lift. Drive.</h1>
-     <p>Hi, I'm Tibe — 20 y/o CS student with a love for tech, fitness, and fast cars.t with a love for tech, fitness, and t with a love for tech, fitness, and </p>
-     <p>Currently interning at Level27 in the security field.</p>
- 
- 
-     <hr style="border: 0.5px solid rgba(77, 72, 68, 0.2); margin: 2rem 0;">
-     <div style="display: flex; justify-content: space-between; gap: 20px;">
- 
-           <!--- left box  --->
- 
-       <div class="container" style="width: 50%; word-wrap: break-word; align-items: center; position: relative; border-right: 1px solid rgba(77, 72, 68, 0.2);">
-         <h2>Contact</h2>
-         <div style="width: 100%; position: relative;">
-         <a href="https://www.instagram.com/tibeprincen/" target="_blank" style="text-decoration: none;">
-         Instagram
-         </a>
-         <img src="arrow-upper-right.png" alt="Instagram" style="width: 10px; height: 10px; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">
-         </div>
-         <div style="width: 100%; position: relative;">
-         <a href="https://www.linkedin.com/in/tibeprincen/" target="_blank" style="text-decoration: none;">
-         LinkedIn
-         </a>
-         <img src="arrow-upper-right.png" alt="LinkedIn" style="width: 10px; height: 10px; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">
-       </div>
-       </div>
- 
- 
-           <!--- right box  --->
-          <div class="container" style="width: 50%; word-wrap: break-word; align-items: center; position: relative;">
-         <h2>Education</h2>
-         <div style="width: 100%; position: relative;">
-         <a>
-         PXL SNB
-         </a>
-         </div>
-         <div style="width: 100%; position: relative;">
-         <a>
-         VIIO IICT
-         </a>
-       </div>
-       </div>
- 
- 
-     </div>
- </div>
- </body>
- </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>努力は裏切らない</title>
+  <link rel="icon" type="image/png" href="favicon_love.png">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      background-color: #d6ccc2;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #4d4844;
+    }
+    h2 {
+      font-size: 16px;
+      color: #4d4844;
+    }
+    p {
+      font-size: 15px;
+      color: #4d4844;
+    }
+    a {
+      font-size: 15px;
+      color: #4d4844;
+    }
+
+    /* Hamburger Menu Styles */
+    .hamburger {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 5px;
+      background-color: #4d4844;
+      border-radius: 5px;
+    }
+
+    /* Menu Styles */
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .menu a {
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu.active {
+      display: flex;
+    }
+
+    /* Container for content */
+    .container {
+      width: 600px;
+      word-wrap: break-word;
+    }
+
+    hr {
+      border: 0.5px solid rgba(77, 72, 68, 0.2);
+      margin: 2rem 0;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* Box Styles */
+    .box {
+      width: 50%;
+      word-wrap: break-word;
+      align-items: center;
+      position: relative;
+      border-right: 1px solid rgba(77, 72, 68, 0.2);
+    }
+
+    .box:last-child {
+      border-right: none;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Hamburger Icon -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu" id="menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Portfolio</a>
+  </div>
+
+  <!-- Content Section -->
+  <div class="container">
+    <h1>Build. Lift. Drive.</h1>
+    <p>Hi, I'm Tibe — 20 y/o CS student with a love for tech, fitness, and fast cars.</p>
+    <p>Currently interning at Level27 in the security field.</p>
+
+    <hr>
+
+    <div class="flex-container">
+      <!-- Left Box -->
+      <div class="box">
+        <h2>Contact</h2>
+        <div style="width: 100%; position: relative;">
+          <a href="https://www.instagram.com/tibeprincen/" target="_blank" style="text-decoration: none;">
+            Instagram
+          </a>
+          <img src="arrow-upper-right.png" alt="Instagram" style="width: 10px; height: 10px; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">
+        </div>
+        <div style="width: 100%; position: relative;">
+          <a href="https://www.linkedin.com/in/tibeprincen/" target="_blank" style="text-decoration: none;">
+            LinkedIn
+          </a>
+          <img src="arrow-upper-right.png" alt="LinkedIn" style="width: 10px; height: 10px; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">
+        </div>
+      </div>
+
+      <!-- Right Box -->
+      <div class="box">
+        <h2>Education</h2>
+        <div style="width: 100%; position: relative;">
+          <a>PXL SNB</a>
+        </div>
+        <div style="width: 100%; position: relative;">
+          <a>VIIO IICT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to toggle the menu visibility
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
