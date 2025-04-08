@@ -1,0 +1,46 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #d6ccc2;
+    margin: 0rem;
+    overflow: hidden;
+}
+
+#image-track > .images {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% 50%;
+}
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .nav {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 10px;               /* Space between links */
+  }
+
+  .nav a {
+    font-size: 14px;
+    color: #4d4844;
+    text-decoration: none;   /* Removes underlining */
+    font-family: sans-serif;
+
+  }
+  
