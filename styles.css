@@ -77,7 +77,7 @@
   }
   
   /* Base Styles */
-  body {
+  html,body {
     overflow-x: hidden;
     margin: 0;
     height: 100vh;
