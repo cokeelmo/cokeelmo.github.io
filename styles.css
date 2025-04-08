@@ -1,11 +1,72 @@
-/* CSS for spinning animation */
-.spin {
-    width: 200px; /* You can adjust the size */
-    height: auto;
-    animation: spin-animation 10s infinite linear; /* 3 seconds duration, infinite loop */
-    transform-style: preserve-3d; /* Ensures the 3D effect stays */
+/* Font Definitions */
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('fonts/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'HelveticaNeue-Bold';
+    src: url('fonts/Helvetica-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/Satoshi-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'BaseNeueBold';
+    src: url('fonts/BaseNeueTrial-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'BaseNeueThin';
+    src: url('fonts/BaseNeueTrial-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'BaseNeueMedium';
+    src: url('fonts/BaseNeueTrial-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: 'Typefesse';
+    src: url('fonts/Typefesse_Claire-Obscure.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'OffBit';
+    src: url('fonts/OffBitTrial-Dot.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
   
+  
+  
+  /* Spinning Animation */
+  .spin {
+    width: 200px;
+    height: auto;
+    animation: spin-animation 10s infinite linear;
+    transform-style: preserve-3d;
+  }
   @keyframes spin-animation {
     0% {
       transform: rotateY(0deg);
@@ -15,75 +76,93 @@
     }
   }
   
+  /* Base Styles */
   body {
     margin: 0;
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    font-family: 'Satoshi', sans-serif;
     background-color: #d6ccc2;
     flex-direction: column;
+    overflow: hidden;
   }
   
+
   h1 {
     font-size: 20px;
     color: #4d4844;
   }
-  
   h2 {
     font-size: 16px;
     color: #4d4844;
   }
-  
-  p {
-    font-size: 15px;
-    color: #4d4844;
-  }
-  
+  p,
   a {
     font-size: 15px;
     color: #4d4844;
   }
+
+  .container h1,h2
+  {
+    font-family: 'Satoshi-Bold',serif;
+  }
   
-  /* Navigation Styles */
+  /* Navigation */
   .nav {
     position: absolute;
     right: 20px;
     bottom: 20px;
     display: flex;
-    flex-direction: column; /* Stack vertically */
-    gap: 10px;               /* Space between links */
+    flex-direction: column;
+    gap: 10px;
   }
-  
   .nav a {
     font-size: 14px;
     color: #4d4844;
-    text-decoration: none;   /* Removes underlining */
+    text-decoration: none;
+    font-family: 'Satoshi', sans-serif;
   }
-  
   .nav a:hover {
     opacity: 0.6;
   }
   
-  /* Container for content */
+  /* Optional Additional Links */
+  .additional-links {
+    position: absolute;
+    top: 30px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+  }
+  .additional-links a {
+    font-size: 14px;
+    color: #4d4844;
+    text-decoration: none;
+  }
+  .additional-links a:hover {
+    opacity: 0.6;
+  }
+  
+  /* Logo */
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  /* Container and Layout */
   .container {
     width: 600px;
     word-wrap: break-word;
   }
-  
-  hr {
-    border: 0.5px solid rgba(77, 72, 68, 0.2);
-    margin: 2rem 0;
-  }
-  
   .flex-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
   }
-  
-  /* Box Styles */
   .box {
     width: 50%;
     word-wrap: break-word;
@@ -91,36 +170,37 @@
     position: relative;
     border-right: 1px solid rgba(77, 72, 68, 0.2);
   }
-  
   .box:last-child {
     border-right: none;
   }
-  
   .boxline a:hover,
   .boxline img:hover {
-    color: rgba(77, 72, 68, 0.5); /* Lightens the text color */
-    filter: brightness(1.2); /* Lightens the image */
+    color: rgba(77, 72, 68, 0.5);
+    filter: brightness(1.2);
+  }
+
+  .box h2 {
+   font-family: 'Satoshi-Bold', sans-serif;
+   font-size: 20px;
+  }
+
+  hr {
+    border: 0.5px solid rgba(77, 72, 68, 0.2);
+    margin: 2rem 0;
   }
   
-  .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-
-  .additional-links {
-    position: absolute;
-    top: 30px;
-    margin: auto;
+  /* Image Track */
+  #image-track {
     display: flex;
-    gap: 25px; /* Space between links */
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
   }
-  .additional-links a{
-    font-size: 14px;
-    color: #4d4844;
-    text-decoration: none;   /* Removes underlining */
+  #image-track > .images {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% 50%;
   }
-    .additional-links a:hover {
-        opacity: 0.6;
-    }
-
