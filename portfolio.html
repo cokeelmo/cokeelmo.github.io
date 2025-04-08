@@ -5,124 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>努力は裏切らない</title>
   <link rel="icon" type="image/png" href="favicon_love.png">
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: sans-serif;
-      background-color: #d6ccc2;
-      flex-direction: column;
-    }
-
-    h1 {
-      font-size: 20px;
-      color: #4d4844;
-    }
-    h2 {
-      font-size: 16px;
-      color: #4d4844;
-    }
-    p {
-      font-size: 15px;
-      color: #4d4844;
-    }
-    a {
-      font-size: 15px;
-      color: #4d4844;
-    }
-
-     /* Navigation Styles */
-    .nav {
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      display: flex;
-      flex-direction: column; /* Stack vertically */
-      gap: 10px;               /* Space between links */
-    }
-
-    .nav a {
-      font-size: 14px;
-      color: #4d4844;
-      text-decoration: none;   /* Removes underlining */
-    }
-
-    .nav a:hover {
-      opacity: 0.6;
-    }
-
-    /* Container for content */
-    .container {
-      width: 600px;
-      word-wrap: break-word;
-    }
-
-    hr {
-      border: 0.5px solid rgba(77, 72, 68, 0.2);
-      margin: 2rem 0;
-    }
-
-    .flex-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    /* Box Styles */
-    .box {
-      width: 50%;
-      word-wrap: break-word;
-      align-items: center;
-      position: relative;
-      border-right: 1px solid rgba(77, 72, 68, 0.2);
-    }
-
-    .box:last-child {
-      border-right: none;
-    }
-
-    .boxline a:hover,
-    .boxline img:hover {
-      color: rgba(77, 72, 68, 0.5); /* Lightens the text color */
-      filter: brightness(1.2); /* Lightens the image */
-    }
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-
-  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS -->
 </head>
 <body>
   <!-- Hearts Icon -->
+  <div class="logo">
+    <img src="favicon_love.png" alt="Hearts" class="spin" style="width: auto; height: 40px;">
+  </div>
 
-    <div class="logo">
-        <img src="favicon_love.png" alt="Hearts" style="width: auto; height: 40px;">
-      </div>
   <!-- Navigation Icon -->
-
   <div class="nav">
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="gallery.html">Gallerij</a>
   </div>
 
+  <div class="additional-links">
+    <a href="portfolio/seminars.html">Seminars</a> <!-- New link -->
+    <a href="portfolio/innovation-routes.html">Innovation Routes</a> <!-- New link -->
+    <a href="portfolio/hackathon.html">Hackathon</a> <!-- New link -->
+    <a href="portfolio/internationalization.html">Internationalization</a> <!-- New link -->
+  </div>
+
+
   <!-- Content Section -->
   <div class="container">
     <h1>Portfolio.</h1>
     <div class="container">
-        <h2>About Me</h1>
-        <p>Hi, I'm Tibe — a 20-year-old Computer Science student with a passion for technology, fitness, and personal growth.</p>
-        <p>I'm currently interning in the cybersecurity field at Level27, where I get to explore the practical side of my studies and expand my skills in a real-world environment.</p>
-        <p>Outside of tech, I’m dedicated to the gym and the discipline it brings. I believe that progress, whether in code or in life, comes from consistent effort. My interests also extend to cars and motorcycles — anything that combines engineering with performance.</p>
-        <p>I’m always striving to learn, build, and become the best version of myself — both professionally and personally.</p>
-      </div>
-    
-    
+      <h2>About Me</h2> <!-- Fixed the closing tag for h2 -->
+      <p>Hi, I'm Tibe — a 20-year-old Computer Science student with a passion for technology, fitness, and personal growth.</p>
+      <p>I'm currently interning in the cybersecurity field at Level27, where I get to explore the practical side of my studies and expand my skills in a real-world environment.</p>
+      <p>Outside of tech, I’m dedicated to the gym and the discipline it brings. I believe that progress, whether in code or in life, comes from consistent effort. My interests also extend to cars and motorcycles — anything that combines engineering with performance.</p>
+      <p>I’m always striving to learn, build, and become the best version of myself — both professionally and personally.</p>
+    </div>
   </div>
 </body>
 </html>
