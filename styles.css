@@ -258,7 +258,8 @@
         position: static;
         bottom: auto;
         margin: 15px;
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         gap: 15px;
     }
