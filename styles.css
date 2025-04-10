@@ -255,9 +255,9 @@
     }
 
     .additional-links{
+      padding-top: 45px;
         position: static;
         bottom: auto;
-        margin: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
