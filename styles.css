@@ -230,6 +230,7 @@
   .boxline img:hover {
     color: rgba(77, 72, 68, 0.5);
     filter: brightness(1.2);
+    font-size: 16px;
   }
 
   .box h2 {
