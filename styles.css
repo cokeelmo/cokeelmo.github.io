@@ -90,7 +90,6 @@
     background-color: #d6ccc2;
     flex-direction: column;
   }
-  
 
   h1 {
     font-size: 20px;
@@ -113,7 +112,7 @@
   
   /* Navigation */
   .nav {
-    position: absolute;
+    position: fixed;
     right: 20px;
     bottom: 20px;
     display: flex;
@@ -123,11 +122,15 @@
   .nav a {
     font-size: 14px;
     color: #4d4844;
+    width: 55px; /* Remove if movement is cleaner*/
     text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
     font-family: 'Satoshi', sans-serif;
+
   }
   .nav a:hover {
     opacity: 0.6;
+    font-size: 15px;
   }
   
   /* Optional Additional Links */
@@ -142,9 +145,13 @@
     font-size: 14px;
     color: #4d4844;
     text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+
   }
   .additional-links a:hover {
     opacity: 0.6;
+    font-size: 15px;
+
   }
 
   .container {
@@ -160,11 +167,47 @@
   }
   
   /* Logo */
-  .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
+.logo {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  top: 20px;
+  left: 20px;
+}
+.logo img {
+  width: 40px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+/*
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-container::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  color: #4d4844;
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-family: 'Satoshi', sans-serif;
+}
+  .logo-container:hover::after {
+  opacity: 1;
+}
+*/
+.logo img {
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover img {
+  scale: 1.1;
+}
   
   /* Container and Layout */
  
