@@ -154,9 +154,30 @@
 
   }
 
+  .gym-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .gym-text a {
+    text-decoration: none;
+    color: #d6ccc2;
+    font-size: 14px;
+    font-family: 'Satoshi', sans-serif;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  .gym-text a:hover {
+    font-size: 15px;
+    color: #4d4844;
+  }
   .container {
     width: 600px;
     word-wrap: break-word;
+  }
+  video {
+    width: 30%;
+    height: 650px;
+    object-fit: cover; /* This can also be 'contain', depending on your need */
   }
   .portfolio_box {
     margin-top: 10vh;
@@ -226,6 +247,14 @@
   .box:last-child {
     border-right: none;
   }
+.portfolio_img{
+    height: auto;
+    width: 80%;
+    display: block;      /* Makes the image a block element */
+    position: relative;
+    margin: auto;
+  }
+
   .boxline a:hover,
   .boxline img:hover {
     color: rgba(77, 72, 68, 0.5);
@@ -258,6 +287,25 @@
     object-fit: cover;
     object-position: 100% 50%;
   }
+
+
+    /* Image Track */
+    #portfolio-track {
+      display: block;
+      gap: 4vmin;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%); /* Center horizontally */
+      margin: 20px 0; /* Add some vertical spacing */
+      width: 60vmin; /* Match the image width */
+  }
+    #portfolio-track > .images {
+      width: 50vmin;
+      height: 40vmin;
+      object-fit: cover;
+      object-position: 30% 100%;
+    }
+  
 
   /* Adjust body layout for mobile */
 @media (max-width: 768px) {
