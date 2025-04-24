@@ -156,8 +156,8 @@
 
   .gym-text {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
   }
   .gym-text a {
     text-decoration: none;
@@ -169,6 +169,11 @@
   .gym-text a:hover {
     font-size: 15px;
     color: #4d4844;
+  }
+  .gym-icon {
+    transform: rotate(45deg);
+    width: 30px; /* adjust size as needed */
+    height: auto;
   }
   .container {
     width: 600px;
@@ -210,6 +215,7 @@
   margin: auto; /* spacing between images */
   margin-top: 40px;
 }
+
 /*
 .logo-container {
   position: relative;
