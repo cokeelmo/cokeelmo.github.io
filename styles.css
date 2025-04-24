@@ -200,6 +200,16 @@
   height: auto;
   transition: all 0.3s ease;
 }
+.image-stack {
+ padding-top: 40%;
+
+}
+.image-stack img {
+  display: block;
+  width: 30%; /* or set a fixed width like 300px */
+  margin: auto; /* spacing between images */
+  margin-top: 40px;
+}
 /*
 .logo-container {
   position: relative;
